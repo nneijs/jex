@@ -1,12 +1,20 @@
-def my_print(*args, end='\n', sep=' '):
-    # Loop through each argument
-    for arg in args:
-        # Convert the argument to a string and print it
-        # (Assuming str() can handle each data type)
-        print(str(arg), end=sep)
+def detect_language(file_name):
+    if file_name.endswith(".py"):
+        return "Python"
+    elif file_name.endswith(".java"):
+        return "Java"
+    elif file_name.endswith(".js"):
+        return "JavaScript"
+    elif file_name.endswith(".cpp") or file_name.endswith(".h"):
+        return "C++"
+    elif file_name.endswith(".html"):
+        return "HTML"
+    elif file_name.endswith(".css"):
+        return "CSS"
+    else:
+        return "Unknown"
 
-    # Print a newline character at the end (default behavior)
-    print(end, end='')
-
-# Example usage of the custom print function
-my_print("Hello", "World", 42, 3.14)
+# Example usage:
+file_name = "example.py"
+programming_language = detect_language(file_name)
+print(f"The programming language for {file_name} is {programming_language}.")
