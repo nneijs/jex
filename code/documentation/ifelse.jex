@@ -1,0 +1,7 @@
+if (a == a) {
+    print("Yes") # the code is true
+}
+
+else {
+    print("No") # the code is false
+}
